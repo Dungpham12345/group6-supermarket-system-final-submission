@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mem_ID: 1
+  mem_name: MyString
+  gender: MyString
+  date_of_birth: 2023-03-22
+  contact: MyString
+  address: MyString
+
+two:
+  mem_ID: 1
+  mem_name: MyString
+  gender: MyString
+  date_of_birth: 2023-03-22
+  contact: MyString
+  address: MyString

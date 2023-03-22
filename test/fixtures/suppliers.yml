@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sup_ID: 1
+  sup_name: MyString
+  contact: MyString
+  address: MyString
+  email: MyString
+
+two:
+  sup_ID: 1
+  sup_name: MyString
+  contact: MyString
+  address: MyString
+  email: MyString

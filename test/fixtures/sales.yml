@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_code: one
+  staff_ID: one
+  date: 2023-03-22 19:42:28
+  quantity: 1
+  price: 1.5
+  grand_total: 1.5
+
+two:
+  product_code: two
+  staff_ID: two
+  date: 2023-03-22 19:42:28
+  quantity: 1
+  price: 1.5
+  grand_total: 1.5

@@ -1,0 +1,41 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Staff</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to staffs_path, class: button_class(theme: "transparent") do %>
+      All Staffs
+      <% end %>
+      <%= link_to edit_staff_path(@staff), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Staff id:</p>
+        <p><%= @staff.staff_ID %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Staff name:</p>
+        <p><%= @staff.staff_name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Gender integer:</p>
+        <p><%= @staff.gender_integer %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Age:</p>
+        <p><%= @staff.age %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Address:</p>
+        <p><%= @staff.address %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Date of birth:</p>
+        <p><%= @staff.date_of_birth %></p>
+      </li>
+  </ul>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_22_123840) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_22_124228) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -60,6 +60,63 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_22_123840) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  create_table "memberships", force: :cascade do |t|
+    t.integer "mem_ID"
+    t.string "mem_name"
+    t.string "gender"
+    t.date "date_of_birth"
+    t.string "contact"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.integer "product_code"
+    t.string "product_name"
+    t.string "category"
+    t.float "price"
+    t.integer "supplier_ID_id", null: false
+    t.string "subcategory"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["supplier_ID_id"], name: "index_products_on_supplier_ID_id"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.integer "product_code_id", null: false
+    t.integer "staff_ID_id", null: false
+    t.datetime "date"
+    t.integer "quantity"
+    t.float "price"
+    t.float "grand_total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_code_id"], name: "index_sales_on_product_code_id"
+    t.index ["staff_ID_id"], name: "index_sales_on_staff_ID_id"
+  end
+
+  create_table "staffs", force: :cascade do |t|
+    t.integer "staff_ID"
+    t.integer "staff_name"
+    t.string "gender_integer"
+    t.integer "age"
+    t.string "address"
+    t.date "date_of_birth"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "suppliers", force: :cascade do |t|
+    t.integer "sup_ID"
+    t.string "sup_name"
+    t.string "contact"
+    t.string "address"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -77,4 +134,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_22_123840) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "products", "supplier_IDs"
+  add_foreign_key "sales", "product_codes"
+  add_foreign_key "sales", "staff_IDs"
 end
