@@ -2,14 +2,14 @@
 
 one:
   staff_name: MyString
-  gender: 1
+  gender: MyString
   age: 1
   address: MyString
-  date_of_birth: 2023-04-12
+  date_of_birth: 2023-04-13
 
 two:
   staff_name: MyString
-  gender: 1
+  gender: MyString
   age: 1
   address: MyString
-  date_of_birth: 2023-04-12
+  date_of_birth: 2023-04-13
