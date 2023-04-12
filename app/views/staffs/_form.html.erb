@@ -12,16 +12,12 @@
 <% end %>
 
   <div class="mb-6">
-        <%= form.label :staff_ID, class: label_class %>
-          <%= form.number_field :staff_ID, class: input_class %>
-      </div>
-  <div class="mb-6">
         <%= form.label :staff_name, class: label_class %>
-          <%= form.number_field :staff_name, class: input_class %>
+          <%= form.text_field :staff_name, class: input_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :gender_integer, class: label_class %>
-          <%= form.text_field :gender_integer, class: input_class %>
+        <%= form.label :gender, class: label_class %>
+          <%= form.number_field :gender, class: input_class %>
       </div>
   <div class="mb-6">
         <%= form.label :age, class: label_class %>

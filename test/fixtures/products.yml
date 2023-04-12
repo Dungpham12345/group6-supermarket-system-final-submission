@@ -1,17 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  product_code: 1
   product_name: MyString
   category: MyString
   price: 1.5
-  supplier_ID: one
+  supplier: one
   subcategory: MyString
+  origin: MyString
+  size: MyString
 
 two:
-  product_code: 1
   product_name: MyString
   category: MyString
   price: 1.5
-  supplier_ID: two
+  supplier: two
   subcategory: MyString
+  origin: MyString
+  size: MyString

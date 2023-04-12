@@ -18,7 +18,6 @@ class MembershipsTest < ApplicationSystemTestCase
     fill_in "Contact", with: @membership.contact
     fill_in "Date of birth", with: @membership.date_of_birth
     fill_in "Gender", with: @membership.gender
-    fill_in "Mem id", with: @membership.mem_ID
     fill_in "Mem name", with: @membership.mem_name
     click_on "Create Membership"
 
@@ -34,7 +33,6 @@ class MembershipsTest < ApplicationSystemTestCase
     fill_in "Contact", with: @membership.contact
     fill_in "Date of birth", with: @membership.date_of_birth
     fill_in "Gender", with: @membership.gender
-    fill_in "Mem id", with: @membership.mem_ID
     fill_in "Mem name", with: @membership.mem_name
     click_on "Update Membership"
 

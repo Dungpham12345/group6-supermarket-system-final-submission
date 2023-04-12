@@ -14,10 +14,6 @@
 
   <ul class="text-slate-700">
       <li>
-        <p class="font-semibold">Product code:</p>
-        <p><%= @product.product_code %></p>
-      </li>
-      <li>
         <p class="font-semibold">Product name:</p>
         <p><%= @product.product_name %></p>
       </li>
@@ -30,12 +26,20 @@
         <p><%= @product.price %></p>
       </li>
       <li>
-        <p class="font-semibold">Supplier id:</p>
-        <p><%= @product.supplier_ID %></p>
+        <p class="font-semibold">Supplier:</p>
+        <p><%= @product.supplier %></p>
       </li>
       <li>
         <p class="font-semibold">Subcategory:</p>
         <p><%= @product.subcategory %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Origin:</p>
+        <p><%= @product.origin %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Size:</p>
+        <p><%= @product.size %></p>
       </li>
   </ul>
 </div>

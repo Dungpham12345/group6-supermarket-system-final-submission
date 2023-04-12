@@ -17,7 +17,7 @@ class StaffsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create staff" do
     assert_difference("Staff.count") do
-      post staffs_url, params: { staff: { address: @staff.address, age: @staff.age, date_of_birth: @staff.date_of_birth, gender_integer: @staff.gender_integer, staff_ID: @staff.staff_ID, staff_name: @staff.staff_name } }
+      post staffs_url, params: { staff: { address: @staff.address, age: @staff.age, date_of_birth: @staff.date_of_birth, gender: @staff.gender, staff_name: @staff.staff_name } }
     end
 
     assert_redirected_to staff_url(Staff.last)
@@ -34,7 +34,7 @@ class StaffsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update staff" do
-    patch staff_url(@staff), params: { staff: { address: @staff.address, age: @staff.age, date_of_birth: @staff.date_of_birth, gender_integer: @staff.gender_integer, staff_ID: @staff.staff_ID, staff_name: @staff.staff_name } }
+    patch staff_url(@staff), params: { staff: { address: @staff.address, age: @staff.age, date_of_birth: @staff.date_of_birth, gender: @staff.gender, staff_name: @staff.staff_name } }
     assert_redirected_to staff_url(@staff)
   end
 

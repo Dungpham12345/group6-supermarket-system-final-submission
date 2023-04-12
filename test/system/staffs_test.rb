@@ -17,8 +17,7 @@ class StaffsTest < ApplicationSystemTestCase
     fill_in "Address", with: @staff.address
     fill_in "Age", with: @staff.age
     fill_in "Date of birth", with: @staff.date_of_birth
-    fill_in "Gender integer", with: @staff.gender_integer
-    fill_in "Staff id", with: @staff.staff_ID
+    fill_in "Gender", with: @staff.gender
     fill_in "Staff name", with: @staff.staff_name
     click_on "Create Staff"
 
@@ -33,8 +32,7 @@ class StaffsTest < ApplicationSystemTestCase
     fill_in "Address", with: @staff.address
     fill_in "Age", with: @staff.age
     fill_in "Date of birth", with: @staff.date_of_birth
-    fill_in "Gender integer", with: @staff.gender_integer
-    fill_in "Staff id", with: @staff.staff_ID
+    fill_in "Gender", with: @staff.gender
     fill_in "Staff name", with: @staff.staff_name
     click_on "Update Staff"
 

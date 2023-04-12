@@ -17,7 +17,6 @@ class SuppliersTest < ApplicationSystemTestCase
     fill_in "Address", with: @supplier.address
     fill_in "Contact", with: @supplier.contact
     fill_in "Email", with: @supplier.email
-    fill_in "Sup id", with: @supplier.sup_ID
     fill_in "Sup name", with: @supplier.sup_name
     click_on "Create Supplier"
 
@@ -32,7 +31,6 @@ class SuppliersTest < ApplicationSystemTestCase
     fill_in "Address", with: @supplier.address
     fill_in "Contact", with: @supplier.contact
     fill_in "Email", with: @supplier.email
-    fill_in "Sup id", with: @supplier.sup_ID
     fill_in "Sup name", with: @supplier.sup_name
     click_on "Update Supplier"
 

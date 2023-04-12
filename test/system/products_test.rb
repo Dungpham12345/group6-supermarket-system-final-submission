@@ -15,11 +15,12 @@ class ProductsTest < ApplicationSystemTestCase
     click_on "New product"
 
     fill_in "Category", with: @product.category
+    fill_in "Origin", with: @product.origin
     fill_in "Price", with: @product.price
-    fill_in "Product code", with: @product.product_code
     fill_in "Product name", with: @product.product_name
+    fill_in "Size", with: @product.size
     fill_in "Subcategory", with: @product.subcategory
-    fill_in "Supplier id", with: @product.supplier_ID_id
+    fill_in "Supplier", with: @product.supplier_id
     click_on "Create Product"
 
     assert_text "Product was successfully created"
@@ -31,11 +32,12 @@ class ProductsTest < ApplicationSystemTestCase
     click_on "Edit this product", match: :first
 
     fill_in "Category", with: @product.category
+    fill_in "Origin", with: @product.origin
     fill_in "Price", with: @product.price
-    fill_in "Product code", with: @product.product_code
     fill_in "Product name", with: @product.product_name
+    fill_in "Size", with: @product.size
     fill_in "Subcategory", with: @product.subcategory
-    fill_in "Supplier id", with: @product.supplier_ID_id
+    fill_in "Supplier", with: @product.supplier_id
     click_on "Update Product"
 
     assert_text "Product was successfully updated"
