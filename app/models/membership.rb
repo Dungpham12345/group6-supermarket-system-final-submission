@@ -1,8 +1,13 @@
 class Membership < ApplicationRecord
     validates_presence_of :mem_name, :gender, :date_of_birth, :contact, :address
 
-    validate :year_up_to_present
-    def year_up_to_present
-        errors.add(:date_of_birth, 'must not be in the future') if date_of_birth > Time.now.year
+    validates :date_of_birth, presence: true
+    validate :date_of_birth_cannot_be_in_the_future
+
+    def date_of_birth_cannot_be_in_the_future
+        if date_of_birth.present? && date_of_birth > Date.today
+        errors.add(:date_of_birth, "can't be in the future")
+        end
     end
+
 end
