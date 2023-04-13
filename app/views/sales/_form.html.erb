@@ -13,11 +13,11 @@
 
   <div class="mb-6">
         <%= form.label :product_id, class: label_class %>
-          <%= form.select :product_id, options_from_collection_for_select(Product.all, 'id', 'name', selected = sale.product_id), class: label_class %>
+          <%= form.select :product_id, options_from_collection_for_select(Product.all, 'id', 'product_name', selected = sale.product_id), class: label_class %>
       </div>
   <div class="mb-6">
         <%= form.label :staff_id, class: label_class %>
-          <%= form.select :staff_id, options_from_collection_for_select(Staff.all, 'id', 'name', selected = sale.staff_id), class: label_class %>
+          <%= form.select :staff_id, options_from_collection_for_select(Staff.all, 'id', 'staff_name', selected = sale.staff_id), class: label_class %>
       </div>
   <div class="mb-6">
         <%= form.label :date, class: label_class %>
