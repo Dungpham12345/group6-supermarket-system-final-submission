@@ -23,6 +23,9 @@ class SalesController < ApplicationController
   def create
     @sale = Sale.new(sale_params)
 
+    # Calculate grand total
+    @sale.grand_total = @sale.price.to_f* @sale.quantity
+
     respond_to do |format|
       if @sale.save
         format.html { redirect_to sale_url(@sale), notice: "Sale was successfully created." }
@@ -36,6 +39,8 @@ class SalesController < ApplicationController
 
   # PATCH/PUT /sales/1 or /sales/1.json
   def update
+     # Calculate grand total
+    @sale.grand_total = @sale.price.to_f * @sale.quantity
     respond_to do |format|
       if @sale.update(sale_params)
         format.html { redirect_to sale_url(@sale), notice: "Sale was successfully updated." }
