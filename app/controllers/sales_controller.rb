@@ -24,7 +24,7 @@ class SalesController < ApplicationController
     @sale = Sale.new(sale_params)
 
     # Calculate grand total
-    @sale.grand_total = @sale.price.to_f* @sale.quantity
+    @sale.grand_total = @sale.price.to_f* @sale.quantity.to_i
 
     respond_to do |format|
       if @sale.save
@@ -40,7 +40,7 @@ class SalesController < ApplicationController
   # PATCH/PUT /sales/1 or /sales/1.json
   def update
      # Calculate grand total
-    @sale.grand_total = @sale.price.to_f * @sale.quantity
+    @sale.grand_total = @sale.price.to_f * @sale.quantity.to_i
     respond_to do |format|
       if @sale.update(sale_params)
         format.html { redirect_to sale_url(@sale), notice: "Sale was successfully updated." }
