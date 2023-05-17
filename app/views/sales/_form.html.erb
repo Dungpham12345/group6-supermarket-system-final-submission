@@ -13,7 +13,7 @@
 
   <div class="mb-6">
         <%= form.label :product_id, class: label_class %>
-          <%= form.collection_select :product_id , Product.all, :id, :product_name, {}, id: 'product-select' %>
+          <%= form.collection_select :product_id , Product.all, :id, :product_name, { prompt: true }, id: 'product-select' %>
       </div>
   <div class="mb-6">
         <%= form.label :staff_id, class: label_class %>

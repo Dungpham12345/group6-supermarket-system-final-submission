@@ -22,7 +22,6 @@ class SalesController < ApplicationController
   # POST /sales or /sales.json
   def create
     @sale = Sale.new(sale_params)
-
     # Calculate grand total
     @sale.grand_total = @sale.price.to_f* @sale.quantity.to_i
 
