@@ -6,12 +6,11 @@
       <%= link_to memberships_path, class: button_class(theme: "transparent") do %>
       All Memberships
       <% end %>
-      <%= link_to edit_membership_path(@membership), class: button_class(theme:"primary") do %>
-      Edit
+      <% if user_signed_in? %>
+        <%= link_to 'Edit Membership', edit_membership_path(@membership) %>
       <% end %>
     </div>
   </div>
-
   <ul class="text-slate-700">
       <li>
         <p class="font-semibold">Mem name:</p>

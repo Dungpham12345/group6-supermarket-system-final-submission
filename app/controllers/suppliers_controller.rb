@@ -1,6 +1,6 @@
 class SuppliersController < ApplicationController
-  before_action :set_supplier, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [:show]
+  before_action :set_supplier, only: [:show, :edit, :update, :destroy]
   # GET /suppliers or /suppliers.json
   def index
     @suppliers = Supplier.all

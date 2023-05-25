@@ -6,8 +6,8 @@
       <%= link_to staffs_path, class: button_class(theme: "transparent") do %>
       All Staffs
       <% end %>
-      <%= link_to edit_staff_path(@staff), class: button_class(theme:"primary") do %>
-      Edit
+      <% if user_signed_in? %>
+        <%= link_to 'Edit Staff', edit_staff_path(@staff) %>
       <% end %>
     </div>
   </div>

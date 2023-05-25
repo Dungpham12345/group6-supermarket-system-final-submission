@@ -1,6 +1,6 @@
 class StaffsController < ApplicationController
-  before_action :set_staff, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [:show]
+  before_action :set_staff, only: [:show, :edit, :update, :destroy]
   # GET /staffs or /staffs.json
   def index
     @staffs = Staff.all

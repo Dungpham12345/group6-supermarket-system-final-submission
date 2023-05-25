@@ -1,6 +1,6 @@
 class MembershipsController < ApplicationController
-  before_action :set_membership, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [:show]
+  before_action :set_membership, only: [:show, :edit, :update, :destroy]
   # GET /memberships or /memberships.json
   def index
     @memberships = Membership.all

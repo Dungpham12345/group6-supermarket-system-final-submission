@@ -6,8 +6,8 @@
       <%= link_to products_path, class: button_class(theme: "transparent") do %>
       All Products
       <% end %>
-      <%= link_to edit_product_path(@product), class: button_class(theme:"primary") do %>
-      Edit
+      <% if user_signed_in? %>
+        <%= link_to 'Edit Product', edit_product_path(@product) %>
       <% end %>
     </div>
   </div>

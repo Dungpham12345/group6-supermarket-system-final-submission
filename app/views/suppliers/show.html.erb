@@ -6,8 +6,8 @@
       <%= link_to suppliers_path, class: button_class(theme: "transparent") do %>
       All Suppliers
       <% end %>
-      <%= link_to edit_supplier_path(@supplier), class: button_class(theme:"primary") do %>
-      Edit
+      <% if user_signed_in? %>
+        <%= link_to 'Edit Supplier', edit_supplier_path(@supplier) %>
       <% end %>
     </div>
   </div>
