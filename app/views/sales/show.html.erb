@@ -35,7 +35,7 @@
       </li>
       <li>
         <p class="font-semibold">Grand total:</p>
-        <p><%= @sale.grand_total %></p>
+        <p><%= @sale.grand_total = @sale.product.price.to_f * @sale.quantity.to_i %></p>
       </li>
   </ul>
 </div>
